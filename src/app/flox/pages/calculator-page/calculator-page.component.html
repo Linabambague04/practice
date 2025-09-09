@@ -1,8 +1,37 @@
 <div>
   <div>
     <app-header-menu />
-    <div>
+    <div class="content">
       <h1>Calculator</h1>
+      <div class="calculator">
+        <input type="text" [value]="display" readonly />
+
+        <div class="buttons">
+          <button (click)="press('7')">7</button>
+          <button (click)="press('8')">8</button>
+          <button (click)="press('9')">9</button>
+          <button (click)="press('/')">/</button>
+
+          <button (click)="press('4')">4</button>
+          <button (click)="press('5')">5</button>
+          <button (click)="press('6')">6</button>
+          <button (click)="press('*')">*</button>
+
+          <button (click)="press('1')">1</button>
+          <button (click)="press('2')">2</button>
+          <button (click)="press('3')">3</button>
+          <button (click)="press('-')">-</button>
+
+          <button (click)="press('0')">0</button>
+          <button (click)="press('.')">.</button>
+          <button (click)="calculate()">=</button>
+          <button (click)="press('+')">+</button>
+
+          <button (click)="clear()">C</button>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
