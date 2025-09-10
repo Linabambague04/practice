@@ -11,8 +11,8 @@ export const routes: Routes = [
   },
 
   {
-    path: 'IBM-calculator',
-    loadComponent: () => import('./flox/pages/IBM-calculator-page/IBM-calculator-page.component').then(m =>m.IBMCalculatorPageComponent)
+    path: 'IMC-calculator',
+    loadComponent: () => import('./flox/pages/IMC-calculator-page/IMC-calculator-page.component').then(m =>m.IMCCalculatorPageComponent)
   },
 
   {

@@ -19,7 +19,7 @@ export class HeaderMenuOptionsComponent {
   headerMenuOptions: headerMenuOption[] = [
     { label: 'Dashboard', route: '/dashboard' },
     { label: 'Calculator', route: '/calculator' },
-    { label: 'IBM calculator', route: '/IBM-calculator' },
+    { label: 'IMC calculator', route: '/IMC-calculator' },
     { label: 'Contact', route: '/contact' },
   ];
 }

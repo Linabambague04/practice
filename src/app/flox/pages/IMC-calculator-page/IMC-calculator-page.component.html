@@ -1,0 +1,42 @@
+<div>
+  <div>
+    <app-header-menu />
+    <div class="content">
+      <h1>IMC Calculator</h1>
+      <form (ngSubmit)="calcularIMC()" #form="ngForm">
+        <label>
+          Peso (kg):
+          <input type="number" [(ngModel)]="peso" name="peso" required />
+        </label>
+        <br />
+
+        <label>
+          Altura (cm):
+          <input type="number" [(ngModel)]="altura" name="altura" required />
+        </label>
+        <br />
+
+        <button type="submit" [disabled]="!form.form.valid">Calcular</button>
+      </form>
+
+      <div class="result" *ngIf="imcResultado !== null">
+        <p>Tu IMC es: <strong>{{ imcResultado }}</strong></p>
+        <p>Clasificación: <strong>{{ getClasificacion(imcResultado) }}</strong></p>
+
+        <label>Indicador de IMC:</label>
+        <progress [value]="getBarraProgreso(imcResultado)" max="100"></progress>
+      </div>
+
+      <div class="last" *ngIf="imcHistorial.length > 0">
+        <h3>Historial de IMC:</h3>
+        <ul>
+          <li *ngFor="let imc of imcHistorial; let i = index">
+            Cálculo #{{ i + 1 }}: {{ imc }} ({{ getClasificacion(imc) }})
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+</div>
