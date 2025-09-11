@@ -1,8 +1,27 @@
 <div>
   <div>
-    <app-header-menu />
-    <div>
-      <h1>Contacts</h1>
+    <app-header-menu></app-header-menu>
+    <div class="content">
+      <h1>Welcome to the Contacts Page</h1>
+      <p class="pr-1">
+        Hi, I'm Lyna and this is my Angular practice project. I hope it helps you understand how things work.
+      </p>
+      <p class="pr-2">
+        The first page is a dashboard where you can enter your name, and it will be saved in local storage.
+      </p>
+      <p class="pr-3">
+        The second feature is a calculator that saves a history of all your calculations.
+      </p>
+      <p class="pr-4">
+        Third, there is an IMC (BMI) calculator where you can calculate your body mass index. It also saves a history of your results and shows you your classification.
+      </p>
+      <p class="pr-5">
+        Finally, this page gives you a short overview of the project and offers a route to go back to the dashboard.
+      </p>
+      <button onclick="window.location.href='/dashboard'">
+        <a>Go to Dashboard</a>
+      </button>
     </div>
   </div>
+  <app-footer></app-footer>
 </div>

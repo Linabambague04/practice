@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { HeaderMenuComponent } from "../../components/header-menu/header-menu.component";
+import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
   selector: 'app-dashboard-page',
   templateUrl: './dashboard-page.component.html',
-  imports: [HeaderMenuComponent],
+  imports: [HeaderMenuComponent, FooterComponent],
 })
 export class DashboardPageComponent {
   name = signal('');

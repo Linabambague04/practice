@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { HeaderMenuComponent } from "../../components/header-menu/header-menu.component";
 import { CalculatorStorageService } from '../../../services/calculator.service';
+import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
   selector: 'app-calculator-page',
-  imports: [HeaderMenuComponent],
+  imports: [HeaderMenuComponent, FooterComponent],
   templateUrl: './calculator-page.component.html',
   styleUrls: ['./calculator-page.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

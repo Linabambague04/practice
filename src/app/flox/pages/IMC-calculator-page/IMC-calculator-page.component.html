@@ -21,22 +21,26 @@
 
       <div class="result" *ngIf="imcResultado !== null">
         <p>Tu IMC es: <strong>{{ imcResultado }}</strong></p>
-        <p>Clasificación: <strong>{{ getClasificacion(imcResultado) }}</strong></p>
+        <p>Clasificación: <strong [innerHTML]="getClasificacion(imcResultado)"></strong></p>
 
         <label>Indicador de IMC:</label>
-        <progress [value]="getBarraProgreso(imcResultado)" max="100"></progress>
+        <progress
+          [value]="getBarraProgreso(imcResultado)"
+          max="100"
+          [ngClass]="getClaseColorBarra(imcResultado)">
+        </progress>
+
       </div>
 
       <div class="last" *ngIf="imcHistorial.length > 0">
         <h3>Historial de IMC:</h3>
         <ul>
-          <li *ngFor="let imc of imcHistorial; let i = index">
-            Cálculo #{{ i + 1 }}: {{ imc }} ({{ getClasificacion(imc) }})
+          <li class="historial-item" *ngFor="let imc of imcHistorial; let i = index">
+           <strong>Cálculo {{ i + 1 }}:</strong> <em> {{ imc }} <br></em> <span [innerHTML]="getClasificacion(imc)"></span>
           </li>
         </ul>
       </div>
-
-
     </div>
   </div>
+    <app-footer></app-footer>
 </div>
