@@ -26,7 +26,8 @@ export class DashboardPageComponent {
     };
 
     this.userService.addUser(newUser);
-
+    alert(`¡Bienvenido ${trimmedName}!`);
+    
     console.log(`Usuario agregado: ${trimmedName}`);
 
     this.name.set('');
